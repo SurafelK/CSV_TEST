@@ -10,7 +10,7 @@ class CsvController extends Controller
 {
     public function csvToJson()
     {
-        $filePath = storage_path('app/Book1.csv');
+        $filePath = storage_path('../Dummy/Book1.csv');
         $outPutFilePath = storage_path('app/processed_sales_data.csv');
 
         $csvReader = Reader::createFromPath($filePath);
@@ -29,7 +29,7 @@ class CsvController extends Controller
 
                 $department = $record[0];
 
-                
+
                 $sales = $record[2];
 
           
