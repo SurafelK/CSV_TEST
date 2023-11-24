@@ -18,7 +18,7 @@ class CsvController extends Controller
 
         $records = $csvReader->getRecords();
 
-        $header = ['Department Name', 'Total Number of Sales'];
+      
 
 
         $salesByDepartment = [];
@@ -27,8 +27,7 @@ class CsvController extends Controller
        
             if (isset($record[0]) && isset($record[2])) {
 
-                $department = $record[0];
-
+                $department = trim(($record[0]));
 
                 $sales = $record[2];
 
